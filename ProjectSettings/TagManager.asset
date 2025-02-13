@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Plant
+  - Enemy
+  - Hole
+  - Selectable
+  - Apple
+  - Corn
+  - SunF
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Enemy
+  - Water
+  - UI
+  - Player
+  - Bullet
+  - Plant
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: BackGround
+    uniqueID: 3483412457
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: InGame
+    uniqueID: 2167150711
+    locked: 0
