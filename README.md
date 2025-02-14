@@ -90,8 +90,19 @@ public class ObjectPooling : MonoBehaviour
 
 ## 🎨Self-made Pixel Art Asset
 
+**APPLE:**
+
+**CORN:**
+
+**SUNFLOWER:**
+
+**ENEMY:**
 
 
+
+**BOSS:**
+
+![BOSS.GIF](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/Boss_Casting.gif)
 
 
 
@@ -113,7 +124,7 @@ public class ObjectPooling : MonoBehaviour
 ---
 
 ## 🎮 Current Status  
-📦 **Completed**
+✅ **Completed**
 
 ---
 
@@ -121,6 +132,7 @@ public class ObjectPooling : MonoBehaviour
 🔹 **[ ] Mutiple levels**  
 🔹 **[ ] Improved AI Behaviour** 
 🔹 **[ ] Polised 2D animations**  
+
 ---
 
 ## 🏆 Contributors & Credits  
