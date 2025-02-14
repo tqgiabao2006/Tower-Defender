@@ -1,6 +1,6 @@
 # 🪴 Plant Defender - *A Pixel Art Tower Defender Game*
 
-![Logo]()
+![Logo](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/PlantPoster.jpg)
 
 [![Unity](https://img.shields.io/badge/Made_with-Unity-000?logo=unity&style=for-the-badge)](https://unity.com/)  
 [![GitHub Repo](https://img.shields.io/badge/View_on-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/tqgiabao2006/Tower-Defender)
@@ -84,7 +84,7 @@ public class ObjectPooling : MonoBehaviour
 
 **Sample stat of a plan**
 
-![SampleStat.PNG]()
+![SampleStat.PNG](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/Stats.png)
 
 ---
 
@@ -92,13 +92,19 @@ public class ObjectPooling : MonoBehaviour
 
 **APPLE:**
 
+![APPLE.GIF](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/README.gif)
+
 **CORN:**
+
+![Corn.GIF](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/Corn_Shooting_2.gif)
 
 **SUNFLOWER:**
 
+![Sunflower.GIF](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/shooting_lv2.gif)
+
 **ENEMY:**
 
-
+![ENEMY.GIF](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/Enemy_Running.gif)
 
 **BOSS:**
 
@@ -110,7 +116,7 @@ public class ObjectPooling : MonoBehaviour
 
 ---
 ## 🎥 Demo Gameplay Video
-![Gameplay Preview](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Gameplay.gif)
+![Gameplay Preview](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/Plant_GamePlay.mp4)
 
 ---
 
