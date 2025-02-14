@@ -20,29 +20,21 @@
 
 ### 📌 Details
 
-#### ♻️ Object Pooling
-# Object Pooling in Game Development
+## ♻️ Object Pooling
+
+**Object Pooling in Game Development**
 
 Object Pooling is a design pattern used to manage object creation and reuse efficiently. Instead of frequently instantiating and destroying objects, which can be costly in terms of performance, a pool of pre-instantiated objects is maintained. When an object is needed, it is retrieved from the pool, and when it is no longer in use, it is returned to the pool instead of being destroyed.
 
-## Why Use Object Pooling?
+**Why Use Object Pooling?**
 In game development, performance optimization is critical, especially when dealing with frequent object instantiation and destruction, such as bullets, enemies, or particles. Object Pooling helps reduce garbage collection overhead and improves runtime efficiency by reusing objects instead of creating and destroying them frequently.
 
-## Benefits of Object Pooling
+**Benefits of Object Pooling**
 - **Performance Improvement**: Reduces CPU overhead from frequent object instantiations and garbage collection.
 - **Garbage Collection Reduction**: Since objects are reused, memory allocations and deallocations are minimized, reducing GC spikes.
 - **Better Frame Rate Stability**: Prevents performance hiccups caused by object creation and destruction, leading to a smoother gameplay experience.
 - **Efficient Memory Management**: Controls the number of active objects, reducing memory fragmentation.
 
-## Drawbacks of Object Pooling
-- **Memory Consumption**: A pool reserves memory for objects that might not always be in use.
-- **Complexity**: Implementing and managing an object pool requires additional logic to handle object reuse correctly.
-- **Not Always Necessary**: If objects are not frequently created or destroyed, pooling might not provide noticeable benefits and could add unnecessary complexity.
-
-## When to Use Object Pooling?
-- When dealing with high-frequency object instantiation/destruction (e.g., bullets, enemies, particle effects).
-- When performance optimization is required due to GC spikes.
-- In systems where memory fragmentation needs to be controlled.
 
 ## Implementation in Plant Defender in Unity (C#)
 ```csharp
