@@ -27,6 +27,7 @@
 Object Pooling is a design pattern used to manage object creation and reuse efficiently. Instead of frequently instantiating and destroying objects, which can be costly in terms of performance, a pool of pre-instantiated objects is maintained. When an object is needed, it is retrieved from the pool, and when it is no longer in use, it is returned to the pool instead of being destroyed.
 
 **Why Use Object Pooling?**
+
 In game development, performance optimization is critical, especially when dealing with frequent object instantiation and destruction, such as bullets, enemies, or particles. Object Pooling helps reduce garbage collection overhead and improves runtime efficiency by reusing objects instead of creating and destroying them frequently.
 
 **Benefits of Object Pooling**
@@ -73,74 +74,28 @@ public class ObjectPooling : MonoBehaviour
 }
 ```
 
-![Grid Image](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/BloodVein_Grid.png)
-
-*Grid image, with red color indicating an unwalkable node.*
-
-![Heap Image](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Heap.png)
-
-*Heap interface to optimize the pathfinding algorithm.*
- 
 ---
 
-#### **2. 🤖 A* Pathfinding Algorithm**
-A* (A-Star) is a widely used **graph traversal and pathfinding algorithm** that finds the **shortest path** from a starting point to a target.
+## 🪴 Plant
+**Key features:**
+- A `Plant Base` class fore all children plant classes to inherent with similar variables, and functions such as `Shooting()`, `Upgrade()`
+- The plant shoot by using `Physics2D.OverlapCircleAll()` to check for enemies within the range. If true, call `Shooting()`
+- Player can water plants for them to upgrade
 
-**✨ How It Works**
-A* combines:
-- **G(n)** → The actual cost from the start node to the current node.
-- **H(n)** → The estimated cost (heuristic) from the current node to the goal.
-- **F(n) = G(n) + H(n)** → The total estimated cost of the path.
+**Sample stat of a plan**
 
-The algorithm **prioritizes nodes with the lowest `F(n)`**, ensuring an optimal and efficient path.  
-
-**🕹 Application in Blood Vein**  
-In **Mining**, A* is used for **vehicle movement and network optimization**, allowing mining cars to navigate efficiently.
-
-**📌 Why A***  
-✔ **Optimal & Efficient** – Finds the shortest path with minimal cost.  
-✔ **Heuristic-Based** – Can be tuned for different movement styles.  
-✔ **Scalable** – Works for both simple grids and complex road networks.  
-✔ **Realistic and Random** – Can be modified with random variations to create more realistic behavior.  
+![SampleStat]()
 
 ---
 
-#### **3. ⚙️ Procedural Mesh Generation**
-- **Road Mesh:**
-  - Pre-calculates four standard shape types with different angles: 180° (continuous road), 135°, 90° (corner road), and 45°.
-  - Uses an enum **Direction**, assigned with bitwise integers to merge directions. Iterates through a node's neighbor list and calculates the direction between them.
-  - Determines the number of standard shapes required, then rotates them accordingly.
+## 🎨Self-made Pixel Art Asset
 
-![Bitwise Direction](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Enum%20Direction.png)
 
-![Get Baked Directions](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Get%20direction.png)
 
-  - Finally, uses polar coordinates to create smooth curves at sharp angles.
 
-![Curve Mesh](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/Smooth%20curve.png)
 
-- **Parking Lot Mesh:**
-  - Creates a rounded rectangle based on the building's size and direction.
 
----
 
-#### **4. 🔀 Multi-threading with ECS**
-- **Why Use It?**
-  - **Performance**: Needed to handle large amounts of AI-driven entities (mining cars, roads) efficiently.
-  - **Scalability**: Ensures smooth performance as complexity grows.
-  - **Multithreading**: Avoids performance bottlenecks in pathfinding and vehicle movement.
-
-- **How It Was Applied:**
-  - **ECS (Entity Component System)**: Decouples game data (position, speed, etc.) from logic, improving memory usage and CPU performance.
-  - **Multithreading**: Distributes intensive tasks across multiple CPU cores, maintaining **1000+ FPS** even with **1000 cars**.
-  - **Burst Compiler**: Optimizes performance-critical code, improving runtime execution efficiency.
-
-### **Drawbacks**
-- **Complexity**: DOTS requires a new approach to game architecture, increasing development difficulty.
-- **Debugging Challenges**: Multithreading introduces race conditions and synchronization issues.
-- **Imperfect for Uncertain Data**: User-defined data types that change unpredictably can cause issues in road calculations and building placement.
-
-![ECS](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/ECS.png)
 
 ---
 ## 🎥 Demo Gameplay Video
@@ -187,5 +142,5 @@ In **Mining**, A* is used for **vehicle movement and network optimization**, all
 ---
 
 ## ⭐ Support & Feedback  
-💬 **Have feedback?** Open an [issue](https://github.com/tqgiabao2006/blood-vein/issues) or contact me via email: tqgiabao2006@gmail.com.  
+💬 **Have feedback?** Open an [issue](https://github.com/tqgiabao2006/Tower-Defender/issues) or contact me via email: tqgiabao2006@gmail.com.  
 🎮 **Follow my journey:** [🔗 Portfolio](https://your-portfolio-link.com)  
