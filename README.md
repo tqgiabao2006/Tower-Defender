@@ -1,31 +1,85 @@
-# 🎮 Mining - *A Mining City Builder*
+# 🎮 Plant Defender - *A Pixel Art Tower Defender Game*
 
-![Logo](https://github.com/tqgiabao2006/Blood-vein/blob/main/ReadMe/MiningLogo.png?raw=true)
+![Logo]()
 
 [![Unity](https://img.shields.io/badge/Made_with-Unity-000?logo=unity&style=for-the-badge)](https://unity.com/)  
-[![GitHub Repo](https://img.shields.io/badge/View_on-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/tqgiabao2006/Blood-vein)
+[![GitHub Repo](https://img.shields.io/badge/View_on-GitHub-blue?style=for-the-badge&logo=github)](https://github.com/tqgiabao2006/Tower-Defender)
 
 ---
 
 ## 🚀 Game Overview  
-*Mining* is a **resource management simulation** where you design a **vascular network** to efficiently distribute mining cars underwater. With **Game AI, multi-threading, and procedural generation**, experience the challenge of optimizing pathways using **A* pathfinding and ECS-based logic**.
+*Plant Defender* is a **tower defender game** in which player build plants to project village from enemies. It is strongly influenced by two largest tower defenders is *Kingdom Rush* and *PlantVsZombie*
 
 ### 🎯 Key Features
-- 🏗 **Road System** – Design organic road networks like blood veins.  
-- 🤖 **AI-driven Pathfinding** – Uses the **A* algorithm** for vehicle navigation.  
-- ⚙️ **Procedural Mesh Generation** – Dynamic road structures adapt to player design.  
-- 🔀 **Multi-threading with ECS** – Performance-optimized simulation.  
+- ♻️ **Object Pooling** – Reuses disabled bullets
+- 🪴 **Plants' placements and shooting**  
+- ⚙️ **Simple AI Behavior**
+- ⏫ **Plants' Upgrade**
+- 🎨 **Self-made Pixel Art Asset**
 ---
 
 ### 📌 Details
 
-#### **1. 🏗 Road Systems**
-- **Grid Class:**
-  - This class is given a Vector2 of a **map size** to calculate with a constant **node size**.
-  - Main features: Stores data of all current **Nodes** and returns a **Node** based on the given Vector2 position.
-- **Node Class:**
-  - Main properties: `Vector2 Grid Position`, `bool IsWalkable`, `float Penalty` (for penalty lanes), `List<Node> Neighbors`.
-  - Stored in a **Heap** data structure to optimize the pathfinding algorithm.
+#### ♻️ Object Pooling
+# Object Pooling in Game Development
+
+Object Pooling is a design pattern used to manage object creation and reuse efficiently. Instead of frequently instantiating and destroying objects, which can be costly in terms of performance, a pool of pre-instantiated objects is maintained. When an object is needed, it is retrieved from the pool, and when it is no longer in use, it is returned to the pool instead of being destroyed.
+
+## Why Use Object Pooling?
+In game development, performance optimization is critical, especially when dealing with frequent object instantiation and destruction, such as bullets, enemies, or particles. Object Pooling helps reduce garbage collection overhead and improves runtime efficiency by reusing objects instead of creating and destroying them frequently.
+
+## Benefits of Object Pooling
+- **Performance Improvement**: Reduces CPU overhead from frequent object instantiations and garbage collection.
+- **Garbage Collection Reduction**: Since objects are reused, memory allocations and deallocations are minimized, reducing GC spikes.
+- **Better Frame Rate Stability**: Prevents performance hiccups caused by object creation and destruction, leading to a smoother gameplay experience.
+- **Efficient Memory Management**: Controls the number of active objects, reducing memory fragmentation.
+
+## Drawbacks of Object Pooling
+- **Memory Consumption**: A pool reserves memory for objects that might not always be in use.
+- **Complexity**: Implementing and managing an object pool requires additional logic to handle object reuse correctly.
+- **Not Always Necessary**: If objects are not frequently created or destroyed, pooling might not provide noticeable benefits and could add unnecessary complexity.
+
+## When to Use Object Pooling?
+- When dealing with high-frequency object instantiation/destruction (e.g., bullets, enemies, particle effects).
+- When performance optimization is required due to GC spikes.
+- In systems where memory fragmentation needs to be controlled.
+
+## Implementation in Plant Defender in Unity (C#)
+```csharp
+public class ObjectPooling : MonoBehaviour
+{
+   private static ObjectPooling _instant;
+   public static ObjectPooling Instant => _instant;
+
+   Dictionary<GameObject, List<GameObject>> _pool = new Dictionary<GameObject, List<GameObject>>();
+
+   void Awake()
+   {
+      _instant = this; 
+   }
+   public virtual GameObject GetObj(GameObject prefabs)
+   { 
+      List<GameObject> listObj = new List<GameObject>();
+     if(_pool.ContainsKey(prefabs))
+        listObj = _pool[prefabs];
+
+      else
+      {
+         _pool.Add(prefabs, listObj);
+      }
+       
+      foreach(GameObject g in listObj)
+      {
+         if(g.activeSelf)
+         continue;
+         return g;
+      }
+      GameObject g2 = Instantiate(prefabs, this.transform.position, Quaternion.identity);
+      listObj.Add(g2);
+      return g2;
+   }
+}
+```
 
 ![Grid Image](https://github.com/tqgiabao2006/Blood-vein/raw/main/ReadMe/BloodVein_Grid.png)
 
