@@ -84,7 +84,7 @@ public class ObjectPooling : MonoBehaviour
 
 **Sample stat of a plan**
 
-![SampleStat]()
+![SampleStat.PNG]()
 
 ---
 
@@ -107,37 +107,26 @@ public class ObjectPooling : MonoBehaviour
 | **Technology**   | **Usage**  |  
 |-----------------|-----------|  
 | Unity (C#) | Core Engine & Gameplay |  
-| Shader Graph | Visual Effects & Water Rendering |  
-| A* Algorithm | Pathfinding |  
-| ECS (Entity Component System) | Multi-threading Performance |  
-
----
-
-## 🏗 Design Patterns Used  
-✔ **Observer Pattern** – Event-driven architecture for game logic.  
-✔ **State Pattern** – AI and game state transitions.  
-✔ **Factory Pattern** – Dynamic object creation.  
-✔ **Unity Test Framework** – Ensures stability and correctness.  
+| Object Pooling | Resuse objects|  
+| Aseprite | Pixel art |  
 
 ---
 
 ## 🎮 Current Status  
-📦 **Developing**
+📦 **Completed**
 
 ---
 
 ## 🚧 Development Roadmap  
-🔹 **[ ] Multiplayer Mode** – Co-op city building.  
-🔹 **[ ] Improved AI Steering** – Smarter vehicle movement.  
-🔹 **[ ] Procedural Environment** – Dynamic terrain growth.  
-🔹 **[ ] Transition to 3D Perspective**  
-
+🔹 **[ ] Mutiple levels**  
+🔹 **[ ] Improved AI Behaviour** 
+🔹 **[ ] Polised 2D animations**  
 ---
 
 ## 🏆 Contributors & Credits  
 👨‍💻 **Ben** (*Mad Scientist of Game Lab*) – Solo Developer  
 🎵 **Music & SFX:** Open-source / Custom Compositions  
-📖 **Special Thanks:** [Unity Vietnam Community], and Senior Game Artist Tung Anh as an advisor  
+📖 **Special Thanks:** [Unity Vietnam Community]
 
 ---
 
