@@ -1,4 +1,4 @@
-# 🎮 Plant Defender - *A Pixel Art Tower Defender Game*
+# 🪴 Plant Defender - *A Pixel Art Tower Defender Game*
 
 ![Logo]()
 
