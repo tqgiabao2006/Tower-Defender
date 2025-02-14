@@ -112,11 +112,9 @@ public class ObjectPooling : MonoBehaviour
 
 
 
-
-
 ---
 ## 🎥 Demo Gameplay Video
-![Gameplay Preview](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/Plant_GamePlay.mp4)
+![Gameplay Preview](https://github.com/tqgiabao2006/Tower-Defender/raw/main/Readme/Gameplay.gif)
 
 ---
 
